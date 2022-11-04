@@ -1,0 +1,26 @@
+// Magic card
+
+mixin card(item)
+	li.catalog_item 
+		.catalog_img 
+			img(src=`i/catalog/${item.img}.png`, alt="")
+		.catalog_item_content 
+			.catalog_item_title 
+				h3=item.title
+				if item.vip 
+					.catalog_item_vip VIP 
+			.catalog_item_txt 
+				p Сильнейшая Ясновидящая Софья Николаевна одна из самых сильнейших магов России ведёт приём онлайн по всему миру и обладает всеми видами магий!
+			.catalog_item_phone 
+				a(href="#")
+					.catalog_item_icon.btn_icons 
+						+icon('phone')
+					p=item.phone 
+			.catalog_item_allstar
+				ul.item_star_list 
+					-for(i = 0; i < 5; i++)
+						li.item_star(data-star=i)
+							+icon('star')
+				.item_reviews_counter!=`<span>15</span> отзывов`
+			.catalog_item_link.standart-btn 
+				a(href="#") Подробнее 

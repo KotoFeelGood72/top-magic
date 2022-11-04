@@ -1,0 +1,42 @@
+.ask_form 
+	.ask_form_bg.form_close 
+	.ask_form_main 
+		.ask_form_close.form_close
+			+icon('close')
+		.ask_form_title 
+			h3 оставьте отзыв о маге
+		form(action="").ask_form_action 
+			.ask_form_input 
+				input(type="text" placeholder="Ваше имя")
+			.ask_form_input 
+				input(type="email" placeholder="Ваша почта")
+			.ask_form_textarea 
+				textarea(name="comment" placeholder="Ваш комментарий")
+			.ask_form_star 
+				.item_star_list
+					-for(i = 0; i < 5; i++)
+						input(type="radio" id=`star-${i}` name="rating" value=i)
+						label(for=`star-${i}`)
+							+icon('star')
+			.ask_form_btn 
+				button(type="submit") Отправить
+			.ask_form_policy!='Отправляя форму, вы соглашаетесь с <a href="#" target="_blank">политикой конфиденциальности.</a>'
+
+
+.burger 
+	.bugrer_bg.burger_closer 
+	.burger_main 
+		.burger_close.burger_closer
+			+icon('close')
+		.burger_logo 
+			a(href="#") Топ реальных магов
+		nav.burger_nav 
+			ul 
+				each item in ['Каталог магов', 'Отзывы', 'Возможности магии', 'О нас', 'Контакты']
+					li 
+						a(href="#")=item
+		.burger_phone 
+			a(href="#")
+				.btn_icons 
+					+icon('phone')
+				p 8 982-749-49-98

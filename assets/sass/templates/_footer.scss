@@ -1,0 +1,104 @@
+.footer {
+	width: 100%;
+	min-height: $footer;
+	flex: 0 0 auto;
+	will-change: transform;
+	position: relative;
+	background: rgba(200, 174, 123, 0.1);
+	font-size: 1.6rem;
+	@include bp($point_2) {
+		min-height: $footer_mob;
+	}
+	a {
+		color: $white;
+	}
+}
+
+.footer {
+}
+.section_in {
+}
+.footer_main_w {
+	padding: 2rem 0 2.7rem 0;
+}
+.footer_top {
+	@include flex-space;
+	margin-bottom: 3rem;
+	@include bp($point_2) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+.footer_logo {
+	@include bp($point_2) {
+		margin-bottom: 2rem;
+	}
+	a {
+		text-transform: uppercase;
+		font-weight: 400;
+		font-family: $font_2;
+		font-size: 2rem;
+	}
+}
+.footer_contact {
+	@include flex-start;
+	font-size: 1.8rem;
+	@include bp($point_2) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+.footer_email {
+	margin-right: 5rem;
+	@include bp($point_2) {
+		margin: 0 0 2rem 0;
+	}
+	a {
+		font-size: 1.8rem;
+	}
+}
+.footer_btn_phone {
+	@include border_btn;
+	a {
+		@include flex-start;
+		border-color: rgba(255, 255, 255, 0.3);
+	}
+}
+.icon {
+}
+.icon-phone {
+}
+.footer_bottom {
+	@include flex-space;
+	@include bp($point_2) {
+		flex-direction: column;
+		align-items: flex-start;
+		font-size: 1.4rem;
+	}
+}
+.footer_copyright {
+}
+.footer_col_right {
+	@include flex-start;
+	@include bp($point_2) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+.footer_policy {
+	margin-right: 5rem;
+	@include bp($point_2) {
+		margin: 1rem 0;
+	}
+}
+.footer_arkada_brand {
+	a {
+		@include flex-start;
+		p {
+			margin-right: 1.5rem;
+		}
+	}
+}
+.footer_arkada_logo {
+	width: 3.3rem;
+}

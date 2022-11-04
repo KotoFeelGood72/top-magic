@@ -1,0 +1,88 @@
+
+// Сброс стилей input
+@mixin app {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	background-color: transparent;
+	font-family: $font_1;
+	font-size: $font_size_base;
+}
+
+// Input end
+
+
+// Flex styles
+
+@mixin flex-center {
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-col {
+	flex-direction: column;
+}
+
+@mixin flex-start {
+	justify-content: flex-start;
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-space {
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-end {
+	justify-content: flex-end;
+	display: flex;
+	align-items: center;
+}
+
+// End flex styles
+
+// Style default btn
+
+
+
+
+@mixin border_btn {
+	position: relative;
+	@include flex-center;
+	padding: 1.6rem 4rem;
+	font-size: 1.8rem;
+	font-family: $font_4;
+	border: .1rem solid rgba(200, 174, 123, 0.3);
+	border-radius: 1.5rem;
+	.btn_icons {
+		width: 2rem;
+		height: 2rem;
+		@include flex-center;
+		margin-right: 1.5rem;
+	}
+}
+
+@mixin default_btn {
+	display: inline-flex;
+	a, button {
+		@include flex-center;
+		background-color: rgba(200, 174, 123, 0.1);
+		padding: 2.3rem 10rem;
+		color: $white;
+		font-size: 1.8rem;
+		transition: all .3s ease;
+		border-radius: 1.5rem;
+		@include bp($point_2) {
+			padding: 2rem 6rem;
+			font-size: 1.6rem;
+		}
+		&:hover {
+			background-color: $gold;
+			color: $black;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+header.header 
+	.section_in 
+		.header_row
+			.header_col_left 
+				.header_logo
+					a(href="#") топ реальных магов
+				nav.header_nav 
+					ul.header_nav_list 
+						each item in ['Каталог магов', 'Отзывы', 'Возможности магии', 'О нас', 'Контакты']
+							li 
+								a(href="#")=item
+			.header_col_right
+				.header_phone_link.standart-btn 
+					a(href="#")
+						.header_phone_icon.btn_icons 
+							+icon('phone')
+						p 8 982-749-49-98
+				.burger_trigger 
+					span
+					span 
+					span
+			

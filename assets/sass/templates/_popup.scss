@@ -1,0 +1,286 @@
+.ask_form {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	@include z-index(popup);
+	@include flex-center;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s ease;
+	@include bp($point_2) {
+		padding: 2rem;
+	}
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.ask_form_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $dark;
+}
+.form_close {
+}
+.ask_form_main {
+	position: relative;
+	background: rgba(255, 255, 255, 0.09);
+	padding: 6rem 8.8rem;
+	max-width: 59.6rem;
+	border-radius: 2rem;
+	@include bp($point_2) {
+		padding: 4rem 1.5rem;
+		overflow-y: auto;
+		max-height: 100%;
+	}
+}
+.ask_form_close {
+	position: absolute;
+	top: 2.5rem;
+	right: 2.5rem;
+	width: 2.5rem;
+	@include flex-center;
+	cursor: pointer;
+	@include bp($point_2) {
+		width: 2rem;
+		height: 2rem;
+		top: 1.5rem;
+		right: 1.5rem;
+	}
+}
+.icon {
+}
+.icon-close {
+}
+.ask_form_title {
+
+	h3 {
+		font-size: 3rem;
+		text-transform: uppercase;
+		color: $gold;
+		@include bp($point_2) {
+			font-size: 2rem;
+			max-width: 19rem;
+			text-align: center;
+			margin: 0 auto;
+		}
+	}
+	margin-bottom: 4rem;
+	@include bp($point_2) {
+		margin-bottom: 2rem;
+	}
+}
+.ask_form_action {
+}
+.ask_form_input {
+	margin-bottom: 2rem;
+	input {
+		@include app;
+		background: #E0E0E0;
+		border: .1rem solid rgba(200, 174, 123, 0.3);
+		border-radius: 1rem;
+		width: 100%;
+		font-size: 1.8rem;
+		padding: 2.1rem 3rem;
+		@include bp($point_2) {
+			padding: 1.5rem 2rem;
+			font-size: 1.4rem;
+			border-radius: 0.5rem;
+		}
+	}
+}
+.ask_form_textarea {
+	textarea {
+		@include app;
+		background: #E0E0E0;
+		border: .1rem solid rgba(200, 174, 123, 0.3);
+		border-radius: 1rem;
+		width: 100%;
+		font-size: 1.8rem;
+		padding: 2.1rem 3rem;
+		height: 20.7rem;
+		@include bp($point_2) {
+			height: 15rem;
+		}
+	}
+	margin-bottom: 3rem;
+	@include bp($point_2) {
+		margin-bottom: 2rem;
+	}
+}
+.ask_form_textarea {
+}
+.ask_form_star {
+	margin-bottom: 4rem;
+	@include bp($point_2) {
+		margin-bottom: 2rem;
+	}
+}
+
+.ask_form_star {
+	.item_star_list {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(2.3rem, 1fr));
+		grid-gap: 1rem;
+		width: 100%;
+		transform: scaleX(-1);
+		justify-items: flex-start;
+		max-width: 15.5rem;
+		label {
+			width: 2.3rem;
+			@include flex-center;
+			cursor: pointer;
+			color: transparent;
+			stroke: $gold;
+			transition: all .3s ease;
+		}
+	}
+
+	.item_star_list:not(:checked)>input {
+		display: none;
+	}
+	
+	
+	.item_star_list>input:checked~label {
+		color: $gold;
+	}
+	
+	.item_star_list:not(:checked)>label:hover,
+	.item_star_list:not(:checked)>label:hover~label {
+		color:$gold;
+	}
+}
+
+
+.ask_form_btn {
+	@include default_btn;
+	width: 100%;
+	margin-bottom: 3rem;
+	button {
+		background-color: $gold;
+		color: $dark;
+		width: 100%;
+	}
+}
+.ask_form_policy {
+	font-size: 1.6rem;
+	@include bp($point_2) {
+		font-size: 1.4rem;
+	}
+	a {
+		color: $white;
+		border-bottom: .1rem solid $white;
+		transition: all .3s ease;
+		&:hover {
+			border-bottom: .1rem solid transparent;
+		}
+	}
+}
+.burger {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all .3s ease;
+	@include z-index(popup);
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s ease;
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		.burger_main {
+			transform: translateX(0);
+		}
+	}
+}
+.bugrer_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $dark;
+}
+.close_burger {
+}
+.burger_main {
+	background: rgba(255, 255, 255, 0.09);
+	width: 100%;
+	height: 100%;
+	width: 80%;
+	color: $white;
+	position: relative;
+	padding: 2rem 3rem;
+	overflow-y: auto;
+	max-height: 100%;
+	transition: all .3s ease;
+	transform: translateX(-100%);
+}
+.burger_close {
+	position: absolute;
+	top: 2.6rem;
+	right: 1.5rem;
+	width: 2rem;
+	height: 2rem;
+	cursor: pointer;
+	@include flex-center;
+}
+.burger_logo {
+	margin-bottom: 3rem;
+	a {
+		font-size: 2.6rem;
+		font-family: $font_2;
+		text-transform: uppercase;
+		color: $white;
+		position: relative;
+		z-index: 2;
+		&:before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 65%;
+			content: '';
+			background-color: $gold;
+			height: 100%;
+			@include z-index(el);
+		}
+	}
+}
+.burger_nav {
+	ul {
+		margin-bottom: 3rem;
+		li {
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+				border-bottom: .1rem solid rgba(255, 255, 255, 0.301);
+				padding-bottom: 1rem;
+			}
+			a {
+				color: $white;
+				text-transform: uppercase;
+				font-family: $font_2;
+				font-size: 1.6rem;
+
+			}
+		}
+	}
+}
+.burger_phone {
+	a {
+		@include flex-start;
+		div {
+			margin-right: 2rem;
+		}
+	}
+}
+.btn_icons {
+}
+.icon-phone {
+}
